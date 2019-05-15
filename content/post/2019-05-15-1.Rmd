@@ -1,9 +1,11 @@
 ---
-title: "山雨欲来风满楼"
-author: "Frida Gomam"
-date: 2019-04-24
-categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+title: 山雨欲来风满楼
+author: zz
+date: '2019-04-28'
+slug: '1'
+categories:
+  - R
+tags: []
 ---
 #2019年4月24日-4月28日小记
      
@@ -47,4 +49,3 @@ tags: ["R Markdown", "plot", "regression"]
 就自身而言的话，自己还是挺珍惜这次比赛的，它确实在一定程度上让我认清了自己的诗词水平，各位优秀选手的精彩表现也着实让我向往。更重要的是，和一群有着同样爱好的人为了同一个目标在一个平台上不带目的地畅聊爱好、互相学习、互相坚定，让我有了更坚定自己爱好的信心和勇气！
 
 小沈冲鸭~
-
