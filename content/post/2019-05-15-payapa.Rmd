@@ -1,5 +1,5 @@
 ---
-title: "爬呀爬"
+title: "papa"
 author: "s"
 date: '2019-05-15'
 slug: payapa
@@ -20,4 +20,4 @@ seg<-segment(position,engine_s)
 table(seg)
 f<-freq(seg)
 f<-f[order(f[2],decreasing = TRUE),]
-head(f)
+
