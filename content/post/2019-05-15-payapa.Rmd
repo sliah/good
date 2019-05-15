@@ -13,3 +13,11 @@ link<-"http://www.gov.cn/premier/2019-03/16/content_5374314.htm"
 web<-read_html(link,encoding="utf-8")
 position<-web %>% html_nodes("div.pages_content") %>% html_text()
 print(position)
+library(jiebaR)
+library(jiebaR)
+engine_s<-worker()
+seg<-segment(position,engine_s)
+table(seg)
+f<-freq(seg)
+f<-f[order(f[2],decreasing = TRUE),]
+head(f)
