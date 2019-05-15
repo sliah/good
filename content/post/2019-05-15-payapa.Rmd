@@ -8,6 +8,8 @@ categories: []
 ---
 # 爬取一篇文章
 ```{r}
-x<-(1:10)
-y<-(41:50)
-plot(x,y)
+library(rvest)
+link<-"http://www.gov.cn/premier/2019-03/16/content_5374314.htm"
+web<-read_html(link,encoding="utf-8")
+position<-web %>% html_nodes("div.pages_content") %>% html_text()
+print(position)
