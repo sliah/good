@@ -1,5 +1,5 @@
 ---
-title: "payapa爬虫"
+title: "payapa"
 author: "s"
 date: '2019-05-15'
 slug: payapa
@@ -11,5 +11,3 @@ categories: []
 x<-(1:10)
 y<-(41:50)
 plot(x,y)
-
-
