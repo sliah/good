@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>我的时间函数 - A Hugo website</title>
+<meta property="og:title" content="我的时间函数 - A Hugo website">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/hi.jpg"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="https://v.xiumi.us/board/v5/3SOzx/145297344">daily</a></li>
+    
+    <li><a href="https://v.xiumi.us/board/v5/3SOzx/145307036">hobby</a></li>
+    
+    <li><a href="https://v.xiumi.us/board/v5/3SOzx/144771940">it&#39;s me</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">我的时间函数</h1>
+
+    
+    <span class="article-date">2019-05-16</span>
+    
+
+    <div class="article-content">
+      
+
+
+<p>#想要为感兴趣的历史人物做一个简单的时间函数</p>
+<pre><code>        ♥先从苏轼开始吧</code></pre>
+<pre class="r"><code>x&lt;-Sys.Date()
+y&lt;-as.Date(&quot;1037-01-08&quot;)
+x-y</code></pre>
+<pre><code>## Time difference of 358796 days</code></pre>
+<pre class="r"><code>x1&lt;-as.numeric(format(x,&quot;%Y&quot;))
+y1&lt;-as.numeric(format(y,&quot;%Y&quot;))
+print(paste(&quot;今天是苏轼诞生&quot;,x1-y1,&quot;周年&quot;))</code></pre>
+<pre><code>## [1] &quot;今天是苏轼诞生 982 周年&quot;</code></pre>
+<pre class="r"><code>print(paste(&quot;公元&quot;,y1,&quot;年，即嘉祐二年，在北宋眉州眉山，一代文豪苏东坡呱呱坠地&quot;))</code></pre>
+<pre><code>## [1] &quot;公元 1037 年，即嘉祐二年，在北宋眉州眉山，一代文豪苏东坡呱呱坠地&quot;</code></pre>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

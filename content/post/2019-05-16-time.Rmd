@@ -1,0 +1,22 @@
+---
+title: 我的时间函数
+author: zz
+date: '2019-05-16'
+slug: time
+categories:
+  - R
+tags: []
+---
+#想要为感兴趣的历史人物做一个简单的时间函数
+
+            ♥先从苏轼开始吧
+```{r}
+x<-Sys.Date()
+y<-as.Date("1037-01-08")
+x-y
+x1<-as.numeric(format(x,"%Y"))
+y1<-as.numeric(format(y,"%Y"))
+print(paste("今天是苏轼诞生",x1-y1,"周年"))
+print(paste("公元",y1,"年，即嘉祐二年，在北宋眉州眉山，一代文豪苏东坡呱呱坠地"))
+```
+
