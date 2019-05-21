@@ -17,8 +17,9 @@
       <pubDate>Thu, 16 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/05/16/time/</guid>
-      <description>#想要为感兴趣的历史人物做一个简单的时间函数
- ♥先从苏轼开始吧x&amp;lt;-Sys.Date()y&amp;lt;-as.Date(&amp;quot;1037-01-08&amp;quot;)x-y## Time difference of 358796 daysx1&amp;lt;-as.numeric(format(x,&amp;quot;%Y&amp;quot;))y1&amp;lt;-as.numeric(format(y,&amp;quot;%Y&amp;quot;))print(paste(&amp;quot;今天是苏轼诞生&amp;quot;,x1-y1,&amp;quot;周年&amp;quot;))## [1] &amp;quot;今天是苏轼诞生 982 周年&amp;quot;print(paste(&amp;quot;公元&amp;quot;,y1,&amp;quot;年，即嘉祐二年，在北宋眉州眉山，一代文豪苏东坡呱呱坠地&amp;quot;))## [1] &amp;quot;公元 1037 年，即嘉祐二年，在北宋眉州眉山，一代文豪苏东坡呱呱坠地&amp;quot;</description>
+      <description>#想要为感兴趣的历史人物做一个简单的时间函数
+ ♥先从苏轼开始吧苏轼，字子瞻，又字和仲，号东坡居士，世称苏东坡，苏仙。汉族，北宋眉州眉山（今属四川省眉山市）人，祖籍河北栾城，北宋著名文学家、书法家、画家。苏轼是一位历史人物，时至今日却也从未淡出大众的视野。
+x&amp;lt;-Sys.Date()y&amp;lt;-as.Date(&amp;quot;1037-01-08&amp;quot;)print(paste(&amp;quot;今天是苏轼诞生&amp;quot;,x-y,&amp;quot;天&amp;quot;))## [1] &amp;quot;今天是苏轼诞生 358800 天&amp;quot;x1&amp;lt;-as.numeric(format(x,&amp;quot;%Y&amp;quot;))y1&amp;lt;-as.numeric(format(y,&amp;quot;%Y&amp;quot;))print(paste(&amp;quot;今天是苏轼诞生&amp;quot;,x1-y1,&amp;quot;周年&amp;quot;))## [1] &amp;quot;今天是苏轼诞生 982 周年&amp;quot;print(paste(&amp;quot;公元&amp;quot;,y1,&amp;quot;年，即嘉祐二年，在北宋眉州眉山，一代文豪苏东坡呱呱坠地&amp;quot;))## [1] &amp;quot;公元 1037 年，即嘉祐二年，在北宋眉州眉山，一代文豪苏东坡呱呱坠地&amp;quot;```</description>
     </item>
     
     <item>
