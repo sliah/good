@@ -10,21 +10,16 @@ categories: []
 ```{r}
 library(rvest)
 url<-'http://www.gov.cn/premier/2019-03/16/content_5374314.htm'
-web<-read_html(url,encoding="utf-8") #读取数据，规定编码
+web<-read_html(url,en0coding="utf-8")
 position<-web %>% html_nodes("div.pages_content") %>% html_text()
-position
 library(jiebaR)
-engine_s<-worker(stop_word = "stopwords.txt")#初始化分词引擎并加载停用词。
-seg<-segment(position,engine_s)#分词
-f<-freq(seg) #统计词频
-f<-f[order(f[2],decreasing=TRUE),] #根据词频降序排列
+engine_s<-worker(stop_word = "stopwords.txt")
+seg<-segment(position,engine_s)
+f<-freq(seg) 
+f<-f[order(f[2],decreasing=TRUE),]
 head(f)
-library(wordcloud2)#加载包
-f2<-f[1:150,]     #总共有2000多个词，为了显示效果，我只提取前150个字
-wordcloud2(f2, size = 0.8 ,shape='circle')    #形状设置为一颗五角星
-
-
-
-
+library(wordcloud2)
+f2<-f[1:150,]   
+wordcloud2(f2, size = 0.8 ,shape='triangle')   
 ```
 
