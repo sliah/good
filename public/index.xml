@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>一言不合就爬虫</title>
+      <link>/2019/05/22/%E4%B8%80%E8%A8%80%E4%B8%8D%E5%90%88%E5%B0%B1%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/22/%E4%B8%80%E8%A8%80%E4%B8%8D%E5%90%88%E5%B0%B1%E7%88%AC%E8%99%AB/</guid>
+      <description>#跟着教程爬爬爬
+library(&amp;quot;rvest&amp;quot;)## 载入需要的程辑包：xml2library(&amp;quot;dplyr&amp;quot;)## ## 载入程辑包：&amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(&amp;quot;stringr&amp;quot;)ind &amp;lt;-c(0,25,50,75,100,125,150,175,200,225)book_inf &amp;lt;-data.frame()for (i in 1:length(ind))web&amp;lt;-read_html(str_c(&amp;quot;https://book.douban.com/top250?start=&amp;quot;,ind[i]),encoding=&amp;quot;UTF-8&amp;quot;)p &amp;lt;-web%&amp;gt;%html_nodes(&amp;quot;p.pl&amp;quot;)%&amp;gt;%html_text()q &amp;lt;-web%&amp;gt;%html_nodes(&amp;quot;.pl2 a&amp;quot;)%&amp;gt;%html_text()#爬取图书的rater &amp;lt;-web%&amp;gt;%html_nodes(&amp;quot;.rating_nums&amp;quot;)%&amp;gt;%html_text()#消除q中的空格q &amp;lt;-str_replace_all(q,&amp;quot; &amp;quot;,&amp;quot;&amp;quot;)q &amp;lt;-str_replace_all(q,&amp;quot;\n&amp;quot;,&amp;quot;&amp;quot;)#赋值图书书名和评分name &amp;lt;- qrate &amp;lt;- r#对p进行处理#提取作者名字p1 &amp;lt;-str_split_fixed(p,&amp;quot;/&amp;quot;,2)author &amp;lt;- p1[,1];#提取翻译者名字p2 &amp;lt;-str_split_fixed(p1[,2],&amp;quot;/&amp;quot;,2)a &amp;lt;-str_detect(p2[,1],&amp;quot;出版&amp;quot;)b &amp;lt;- str_detect(p2[,1],&amp;quot;书店&amp;quot;)interpre &amp;lt;-p2[,1]interpre[a|b] &amp;lt;-&amp;quot;NA&amp;quot;#提取出版商p3 &amp;lt;-str_split_fixed(p2[,2],&amp;quot;/&amp;quot;,2)publisher &amp;lt;-p3[,1]publisher[a] &amp;lt;-p2[a,1]publisher[b] &amp;lt;-p2[b,1]#提取出版时间p4 &amp;lt;-str_split_fixed(p3[,2],&amp;quot;/&amp;quot;,2)publish_time &amp;lt;-p4[,1]publish_time[a]&amp;lt;- p3[a,1]publish_time[b]&amp;lt;- p3[b,1]publish_time &amp;lt;- str_replace(publish_time,&amp;quot;年&amp;quot;,&amp;quot;-&amp;quot;)publish_time &amp;lt;- str_replace(publish_time,&amp;quot;月&amp;quot;,&amp;quot;-&amp;quot;)#提取价格p5 &amp;lt;-str_split_fixed(p4[,2],&amp;quot;/&amp;quot;,2)price &amp;lt;- p5[,1]price[a] &amp;lt;-p4[a,1]price[b] &amp;lt;-p4[b,1]#创建数据框存储以上信息book &amp;lt;-data_frame(name,rate,author,interpre,publisher,publish_time,price)## Warning: `data_frame()` is deprecated, use `tibble()`.</description>
+    </item>
+    
+    <item>
       <title>我的时间函数</title>
       <link>/2019/05/22/time/</link>
       <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
