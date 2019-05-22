@@ -22,25 +22,27 @@ library(wordcloud2)
 f2<-f[1:150,]   
 wordcloud2(f2, size = 0.8 ,shape='triangle')   
 
+```
+
+# 爬取豆瓣图书TOP
+```{r}
 library("rvest")
-library("xml2")          
+library("xml2")         
 book <-data.frame()           
-for (i in 1:10)                
+for (i in 1:10)
 url <- paste0("https://book.douban.com/top250?start=",(i-1)*25) 
 web <- read_html(url,encoding="UTF-8")
-name <- web %>% html_nodes("tr>td:nth-child(2)>div.pl2>a") %>% html_text()
-info <-web %>% html_nodes("tr>td:nth-child(2)>p.pl") %>% html_text()    
+name <- web %>% html_nodes("tr>td:nth-child(2)>div.pl2>a") %>% html_text() 
+info <-web %>% html_nodes("tr>td:nth-child(2)>p.pl") %>% html_text() 
 point<-web %>% html_nodes("div.star.clearfix>span.rating_nums") %>% html_text() %>% as.numeric() 
 value<-web %>% html_nodes("div.star.clearfix>span.pl") %>% html_text() %>% as.character()    
 bookinfo <-data.frame(name,info,point,value)
 book <-rbind(book,bookinfo)
-write.csv(book,file="douban_book.csv")    
+write.csv(book,file="douban_book.csv")  
 library("sqldf")
 library("ggplot2") 
 book <- read.csv("D:/website/good/content/post/douban_book.csv") 
 head(book,10)
 ggplot(book,aes(x=point)) + geom_bar()
-
-
 ```
 
