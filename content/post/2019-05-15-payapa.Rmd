@@ -1,12 +1,12 @@
 ---
 title: "爬呀爬"
 author: "s"
-date: '2019-05-15'
+date: '2019-05-22'
 slug: payapa
 tags: []
 categories: []
 ---
-# 爬取一篇文章
+#爬取一篇文章
 ```{r}
 library(rvest)
 url<-'http://www.gov.cn/premier/2019-03/16/content_5374314.htm'
@@ -24,7 +24,7 @@ wordcloud2(f2, size = 0.8 ,shape='triangle')
 
 ```
 
-# 爬取豆瓣图书TOP
+#爬取豆瓣图书TOP20
 ```{r}
 library("rvest")
 library("xml2")         

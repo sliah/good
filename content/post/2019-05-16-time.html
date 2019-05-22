@@ -1,7 +1,7 @@
 ---
 title: 我的时间函数
 author: zz
-date: '2019-05-16'
+date: '2019-05-22'
 slug: time
 categories:
   - R
@@ -24,16 +24,16 @@ print(paste(&quot;今天是苏轼诞生&quot;,w,&quot;周&quot;))</code></pre>
 <pre><code>## [1] &quot;今天是苏轼诞生 51257 周&quot;</code></pre>
 <pre class="r"><code>d&lt;-round(difftime(x,y,units=&quot;days&quot;))
 print(paste(&quot;今天是苏轼诞生&quot;,d,&quot;天&quot;))</code></pre>
-<pre><code>## [1] &quot;今天是苏轼诞生 358801 天&quot;</code></pre>
+<pre><code>## [1] &quot;今天是苏轼诞生 358802 天&quot;</code></pre>
 <pre class="r"><code>h&lt;-round(difftime(x,y,units=&quot;days&quot;))
 print(paste(&quot;苏轼诞生于&quot;,h,&quot;小时之前&quot;))</code></pre>
-<pre><code>## [1] &quot;苏轼诞生于 358801 小时之前&quot;</code></pre>
+<pre><code>## [1] &quot;苏轼诞生于 358802 小时之前&quot;</code></pre>
 <pre class="r"><code>m&lt;-round(difftime(x,y,units=&quot;mins&quot;))
 print(paste(&quot;苏轼诞生于&quot;,m,&quot;分钟之前&quot;))</code></pre>
-<pre><code>## [1] &quot;苏轼诞生于 516673440 分钟之前&quot;</code></pre>
+<pre><code>## [1] &quot;苏轼诞生于 516674880 分钟之前&quot;</code></pre>
 <pre class="r"><code>s&lt;-round(difftime(x,y,units=&quot;secs&quot;))
 print(paste(&quot;苏轼诞生于&quot;,s,&quot;秒之前&quot;))</code></pre>
-<pre><code>## [1] &quot;苏轼诞生于 31000406400 秒之前&quot;</code></pre>
+<pre><code>## [1] &quot;苏轼诞生于 31000492800 秒之前&quot;</code></pre>
 <pre class="r"><code>print(paste(&quot;公元&quot;,y1,&quot;年，苏东坡出生在四川眉山。传说，就在这一年，眉山一座原本郁郁葱葱的大山，不知为何，突然花草凋零、树木枯萎。民间有言：”眉山出三苏，草木为之枯&quot;))</code></pre>
 <pre><code>## [1] &quot;公元 1037 年，苏东坡出生在四川眉山。传说，就在这一年，眉山一座原本郁郁葱葱的大山，不知为何，突然花草凋零、树木枯萎。民间有言：”眉山出三苏，草木为之枯&quot;</code></pre>
 <pre class="r"><code>y3&lt;-as.Date(&quot;1056-01-01&quot;)

@@ -62,7 +62,7 @@
 
   <article class="article">
     
-    <span class="article-duration">1 min read</span>
+    <span class="article-duration">2 min read</span>
     
 
     <h1 class="article-title">爬呀爬</h1>
@@ -103,22 +103,78 @@ head(f)</code></pre>
 ## 1569 企业   51</code></pre>
 <pre class="r"><code>library(wordcloud2)
 f2&lt;-f[1:150,]   
-wordcloud2(f2, size = 0.8 ,shape=&#39;circle&#39;)   </code></pre>
+wordcloud2(f2, size = 0.8 ,shape=&#39;triangle&#39;)   </code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"word":["发展","改革","推进","建设","新","企业","经济","完善","加快","创新","推动","支持","政府","政策","中国","深化","服务","就业","社会","提高","工作","群众","市场","保障","实施","稳","风险","机制","增长","加大","地方","持续","落实","健全","投资","优化","教育","体系","国际","稳定","制度","治理","国家","监管","我国","农村","提升","降低","合作","力度","增强","脱贫","防治","融资","结构","环境","各类","强化","增加","解决","活力","重点","科技","特色","领域","习近平","城镇","依法","国内","精神","开放","中","发挥","消费","基础","做好","金融","保护","减税","农业","核心","举措","小微","市场主体","确保","能力","污染","一批","收费","中央","代表","财政","健康","生态","综合","水平","下降","市场化","压力","关系","生产","成果","制造业","万亿元","战略","困难","负担","更好","目标","乡村","行业","主体","贯彻","维护","作用","方式","经济社会","贫困地区","进一步","资金","地区","专项","改造","攻坚","绿色","全国","生活","扎实","审批","坚定","标准","民族","养老","医保","建成","互联网","比例","改革开放","大幅","时代","基层","改善","结构性","人口","挑战","培育","力量","民生","构建","高质量"],"freq":[134,92,59,56,51,51,46,43,43,41,40,40,39,38,36,34,31,29,27,27,25,24,24,23,23,23,22,22,22,21,20,20,19,19,19,19,18,18,18,18,18,17,17,17,17,17,17,16,16,16,16,15,14,14,14,14,14,14,14,14,13,13,13,13,13,13,13,13,12,12,12,12,12,12,12,12,12,12,12,12,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,10,10,10,10,10,10,10,10,10,10,10,10,10,10,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":1.07462686567164,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"word":["发展","改革","推进","建设","新","企业","经济","完善","加快","创新","推动","支持","政府","政策","中国","深化","服务","就业","社会","提高","工作","群众","市场","保障","实施","稳","风险","机制","增长","加大","地方","持续","落实","健全","投资","优化","教育","体系","国际","稳定","制度","治理","国家","监管","我国","农村","提升","降低","合作","力度","增强","脱贫","防治","融资","结构","环境","各类","强化","增加","解决","活力","重点","科技","特色","领域","习近平","城镇","依法","国内","精神","开放","中","发挥","消费","基础","做好","金融","保护","减税","农业","核心","举措","小微","市场主体","确保","能力","污染","一批","收费","中央","代表","财政","健康","生态","综合","水平","下降","市场化","压力","关系","生产","成果","制造业","万亿元","战略","困难","负担","更好","目标","乡村","行业","主体","贯彻","维护","作用","方式","经济社会","贫困地区","进一步","资金","地区","专项","改造","攻坚","绿色","全国","生活","扎实","审批","坚定","标准","民族","养老","医保","建成","互联网","比例","改革开放","大幅","时代","基层","改善","结构性","人口","挑战","培育","力量","民生","构建","高质量"],"freq":[134,92,59,56,51,51,46,43,43,41,40,40,39,38,36,34,31,29,27,27,25,24,24,23,23,23,22,22,22,21,20,20,19,19,19,19,18,18,18,18,18,17,17,17,17,17,17,16,16,16,16,15,14,14,14,14,14,14,14,14,13,13,13,13,13,13,13,13,12,12,12,12,12,12,12,12,12,12,12,12,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,10,10,10,10,10,10,10,10,10,10,10,10,10,10,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":1.07462686567164,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"triangle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+</div>
+<div id="top" class="section level1">
+<h1>爬取豆瓣图书TOP</h1>
 <pre class="r"><code>library(&quot;rvest&quot;)
-library(&quot;xml2&quot;)          
+library(&quot;xml2&quot;)         
 book &lt;-data.frame()           
-for (i in 1:10)                
+for (i in 1:10)
 url &lt;- paste0(&quot;https://book.douban.com/top250?start=&quot;,(i-1)*25) 
 web &lt;- read_html(url,encoding=&quot;UTF-8&quot;)
-name &lt;- web %&gt;% html_nodes(&quot;tr&gt;td:nth-child(2)&gt;div.pl2&gt;a&quot;) %&gt;% html_text()
-info &lt;-web %&gt;% html_nodes(&quot;tr&gt;td:nth-child(2)&gt;p.pl&quot;) %&gt;% html_text()    
+name &lt;- web %&gt;% html_nodes(&quot;tr&gt;td:nth-child(2)&gt;div.pl2&gt;a&quot;) %&gt;% html_text() 
+info &lt;-web %&gt;% html_nodes(&quot;tr&gt;td:nth-child(2)&gt;p.pl&quot;) %&gt;% html_text() 
 point&lt;-web %&gt;% html_nodes(&quot;div.star.clearfix&gt;span.rating_nums&quot;) %&gt;% html_text() %&gt;% as.numeric() 
-value&lt;-web %&gt;% html_nodes(&quot;div.star.clearfix&gt;span.pl&quot;) %&gt;% html_text() %&gt;% as.character()    #爬取评分人数
+value&lt;-web %&gt;% html_nodes(&quot;div.star.clearfix&gt;span.pl&quot;) %&gt;% html_text() %&gt;% as.character()    
 bookinfo &lt;-data.frame(name,info,point,value)
 book &lt;-rbind(book,bookinfo)
-write.csv(book,file=&quot;douban_book.csv&quot;)    #保存数据</code></pre>
+write.csv(book,file=&quot;douban_book.csv&quot;)  
+library(&quot;sqldf&quot;)</code></pre>
+<pre><code>## 载入需要的程辑包：gsubfn</code></pre>
+<pre><code>## 载入需要的程辑包：proto</code></pre>
+<pre><code>## 载入需要的程辑包：RSQLite</code></pre>
+<pre class="r"><code>library(&quot;ggplot2&quot;) 
+book &lt;- read.csv(&quot;D:/website/good/content/post/douban_book.csv&quot;) 
+head(book,10)</code></pre>
+<pre><code>##     X
+## 1   1
+## 2   2
+## 3   3
+## 4   4
+## 5   5
+## 6   6
+## 7   7
+## 8   8
+## 9   9
+## 10 10
+##                                                                                                name
+## 1                                    \n                动物凶猛\n\n                \n              
+## 2                                     \n                子不语1\n\n                \n              
+## 3                                      \n                新参者\n\n                \n              
+## 4                                    \n                小姨多鹤\n\n                \n              
+## 5              \n                高效能人士的七个习惯（精华版）\n\n                \n              
+## 6                                    \n                爱的艺术\n\n                \n              
+## 7                                    \n                罗杰疑案\n\n                \n              
+## 8                                  \n                夹边沟记事\n\n                \n              
+## 9  \n                白银时代\n\n                \n                   : 时代三部曲 \n              
+## 10                                     \n                琅琊榜\n\n                \n              
+##                                                                 info point
+## 1                       王朔 / 中国电影出版社 / 2004年02月 / 15.50元   8.3
+## 2                           夏达 / 新世纪出版社 / 2009-12 / RMB36.00   9.0
+## 3           [日] 东野圭吾 / 岳远坤 / 南海出版公司 / 2011-9 / 28.00元   8.4
+## 4                             严歌苓 / 作家出版社 / 2008-4 / 28.00元   8.6
+## 5      [美] 史蒂芬·柯维 / 高新勇 / 中国青年出版社 / 2011-6 / 29.00元   8.2
+## 6        [美] 艾·弗洛姆 / 李健鸣 / 上海译文出版社 / 2008-4 / 15.00元   8.8
+## 7  [英] 阿加莎·克里斯蒂 / 张江云 / 人民文学出版社 / 2006-5 / 21.00元   8.9
+## 8                            杨显惠 / 花城出版社 / 2008-09 / 34.00元   9.2
+## 9                             王小波 / 花城出版社 / 1997-5 / 10.00元   8.4
+## 10                             海宴 / 朝华出版社 / 2007-12 / 49.80元   8.5
+##                                                    value
+## 1  (\n                    23653人评价\n                )
+## 2  (\n                    21149人评价\n                )
+## 3  (\n                    23046人评价\n                )
+## 4  (\n                    22366人评价\n                )
+## 5  (\n                    23061人评价\n                )
+## 6  (\n                    21517人评价\n                )
+## 7  (\n                    21005人评价\n                )
+## 8  (\n                    20187人评价\n                )
+## 9  (\n                    22387人评价\n                )
+## 10 (\n                    21437人评价\n                )</code></pre>
+<pre class="r"><code>ggplot(book,aes(x=point)) + geom_bar()</code></pre>
+<p><img src="/post/2019-05-15-payapa_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
 
     </div>
