@@ -44,5 +44,6 @@ library("ggplot2")
 book <- read.csv("D:/website/good/content/post/douban_book.csv") 
 head(book,10)
 ggplot(book,aes(x=point)) + geom_bar()
+
 ```
 
