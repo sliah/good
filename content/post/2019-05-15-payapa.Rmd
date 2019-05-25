@@ -35,7 +35,8 @@ web <- read_html(url,encoding="UTF-8")
 name <- web %>% html_nodes("tr>td:nth-child(2)>div.pl2>a") %>% html_text() 
 info <-web %>% html_nodes("tr>td:nth-child(2)>p.pl") %>% html_text() 
 point<-web %>% html_nodes("div.star.clearfix>span.rating_nums") %>% html_text() %>% as.numeric() 
-value<-web %>% html_nodes("div.star.clearfix>span.pl") %>% html_text() %>% as.character()    
+value<-web %>% html_nodes("div.star.clearfix>span.pl") %>% html_text()%>%
+as.character()    
 bookinfo <-data.frame(name,info,point,value)
 book <-rbind(book,bookinfo)
 write.csv(book,file="douban_book.csv")  
@@ -43,7 +44,20 @@ library("sqldf")
 library("ggplot2") 
 book <- read.csv("D:/website/good/content/post/douban_book.csv") 
 head(book,10)
-ggplot(book,aes(x=point)) + geom_bar()
+ggplot(book,aes(x=point)) + geom_bar() 
+
 
 ```
+
+#爬取足球信息
+
+```{r}
+library(XML)
+url <- 'http://www.stat-nba.com/team/GSW.html'
+dt1 <- readHTMLTable(url,header = T)
+names(dt1[[1]]) <- rvest::repair_encoding(names(dt1[[1]]))
+head(dt1[[1]])
+```
+
+
 
