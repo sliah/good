@@ -1,0 +1,30 @@
+---
+title: 我是新的一页
+author: yaya
+date: '2019-05-28'
+slug: 我是新的一页
+categories:
+  - R
+tags: []
+---
+```{r,6+6,eval=FALSE,echo=TRUE}
+6+6
+##结果被隐藏啦
+
+```
+
+
+```{r,3/3,results='hide'}
+##结果被隐藏啦
+
+```
+
+
+
+
+```{r pressure,echo=FALSE,fig.align='center',fig.height=15,fig.width=8,fig.cap="Fig.0 这是一张粉嫩嫩的图",dev.args=list(bg='pink',pointsize=10)}
+plot(pressure)
+
+
+```
+
