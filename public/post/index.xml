@@ -6,18 +6,18 @@
     <description>Recent content in Posts on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>一言不合就爬虫</title>
-      <link>/2019/05/22/%E4%B8%80%E8%A8%80%E4%B8%8D%E5%90%88%E5%B0%B1%E7%88%AC%E8%99%AB/</link>
-      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
+      <title>R</title>
+      <link>/2019/05/28/r/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/05/22/%E4%B8%80%E8%A8%80%E4%B8%8D%E5%90%88%E5%B0%B1%E7%88%AC%E8%99%AB/</guid>
-      <description>#跟着教程爬爬爬</description>
+      <guid>/2019/05/28/r/</guid>
+      <description>x&amp;lt;-as.character(&amp;quot;你好啊&amp;quot;)y&amp;lt;-as.character(&amp;quot;啊&amp;quot;)z&amp;lt;-as.character(&amp;quot;好啊&amp;quot;)f&amp;lt;-as.character(&amp;quot;你啊&amp;quot;)g&amp;lt;-as.character(&amp;quot;此处&amp;quot;)h&amp;lt;-as.character(&amp;quot;如何&amp;quot;)k&amp;lt;-as.character(&amp;quot;处理&amp;quot;)l&amp;lt;-as.character(&amp;quot;是好&amp;quot;)p&amp;lt;-as.character(&amp;quot;年&amp;quot;)time&amp;lt;-c(10,13,14,16)age&amp;lt;-c(1,2,3,4)issue&amp;lt;-c(x,y,z,f)content&amp;lt;-c(g,h,k,l)patientdata&amp;lt;-data.frame(time,age,issue,content)patientdata## time age issue content## 1 10 1 你好啊 此处## 2 13 2 啊 如何## 3 14 3 好啊 处理## 4 16 4 你啊 是好</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       <guid>/2019/05/22/time/</guid>
       <description>#想要为感兴趣的历史人物做一个简单的时间函数
  ♥先从苏轼开始吧“苏东坡是一个无可救药的乐天派、一个伟大的人道主义者、一个百姓的朋友、一个大文豪、大书法家、创新的画家、造酒试验家、一个工程师、一个憎恨清教徒主义的人、一位瑜伽修行者佛教徒、巨儒政治家、一个皇帝的秘书、酒仙、厚道的法官、一位在政治上专唱反调的人。一个月夜徘徊者、一个诗人、一个小丑。但是这还不足以道出苏东坡的全部……苏东坡比中国其他的诗人更具有多面性天才的丰富感、变化感和幽默感，智能优异，心灵却像天真的小孩——这种混合等于耶稣所谓蛇的智慧加上鸽子的温文。” —-林语堂
-x&amp;lt;-Sys.Date()y&amp;lt;-as.Date(&amp;quot;1037-01-08&amp;quot;)x1&amp;lt;-as.numeric(format(x,&amp;quot;%Y&amp;quot;))y1&amp;lt;-as.numeric(format(y,&amp;quot;%Y&amp;quot;))print(paste(&amp;quot;今天是苏轼诞生&amp;quot;,x1-y1,&amp;quot;周年&amp;quot;))## [1] &amp;quot;今天是苏轼诞生 982 周年&amp;quot;w&amp;lt;-round(difftime(x,y,units=&amp;quot;weeks&amp;quot;))print(paste(&amp;quot;今天是苏轼诞生&amp;quot;,w,&amp;quot;周&amp;quot;))## [1] &amp;quot;今天是苏轼诞生 51257 周&amp;quot;d&amp;lt;-round(difftime(x,y,units=&amp;quot;days&amp;quot;))print(paste(&amp;quot;今天是苏轼诞生&amp;quot;,d,&amp;quot;天&amp;quot;))## [1] &amp;quot;今天是苏轼诞生 358802 天&amp;quot;h&amp;lt;-round(difftime(x,y,units=&amp;quot;days&amp;quot;))print(paste(&amp;quot;苏轼诞生于&amp;quot;,h,&amp;quot;小时之前&amp;quot;))## [1] &amp;quot;苏轼诞生于 358802 小时之前&amp;quot;m&amp;lt;-round(difftime(x,y,units=&amp;quot;mins&amp;quot;))print(paste(&amp;quot;苏轼诞生于&amp;quot;,m,&amp;quot;分钟之前&amp;quot;))## [1] &amp;quot;苏轼诞生于 516674880 分钟之前&amp;quot;s&amp;lt;-round(difftime(x,y,units=&amp;quot;secs&amp;quot;))print(paste(&amp;quot;苏轼诞生于&amp;quot;,s,&amp;quot;秒之前&amp;quot;))## [1] &amp;quot;苏轼诞生于 31000492800 秒之前&amp;quot;print(paste(&amp;quot;公元&amp;quot;,y1,&amp;quot;年，苏东坡出生在四川眉山。传说，就在这一年，眉山一座原本郁郁葱葱的大山，不知为何，突然花草凋零、树木枯萎。民间有言：”眉山出三苏，草木为之枯&amp;quot;))## [1] &amp;quot;公元 1037 年，苏东坡出生在四川眉山。传说，就在这一年，眉山一座原本郁郁葱葱的大山，不知为何，突然花草凋零、树木枯萎。民间有言：”眉山出三苏，草木为之枯&amp;quot;y3&amp;lt;-as.Date(&amp;quot;1056-01-01&amp;quot;)y4&amp;lt;-as.numeric(format(y3,&amp;quot;%Y&amp;quot;))print(paste(&amp;quot;公元&amp;quot;,y4,&amp;quot;年，即北宋嘉祐元年春天，苏轼和弟弟苏辙在父亲苏洵陪伴下，离家出川，前往汴京参加科考.阴差阳错之下成为当年科考第二名&amp;quot;))## [1] &amp;quot;公元 1056 年，即北宋嘉祐元年春天，苏轼和弟弟苏辙在父亲苏洵陪伴下，离家出川，前往汴京参加科考.阴差阳错之下成为当年科考第二名&amp;quot;```</description>
+x&amp;lt;-Sys.Date()y&amp;lt;-as.Date(&amp;quot;1037-01-08&amp;quot;)x1&amp;lt;-as.numeric(format(x,&amp;quot;%Y&amp;quot;))y1&amp;lt;-as.numeric(format(y,&amp;quot;%Y&amp;quot;))print(paste(&amp;quot;今天是苏轼诞生&amp;quot;,x1-y1,&amp;quot;周年&amp;quot;))## [1] &amp;quot;今天是苏轼诞生 982 周年&amp;quot;w&amp;lt;-round(difftime(x,y,units=&amp;quot;weeks&amp;quot;))print(paste(&amp;quot;今天是苏轼诞生&amp;quot;,w,&amp;quot;周&amp;quot;))## [1] &amp;quot;今天是苏轼诞生 51258 周&amp;quot;d&amp;lt;-round(difftime(x,y,units=&amp;quot;days&amp;quot;))print(paste(&amp;quot;今天是苏轼诞生&amp;quot;,d,&amp;quot;天&amp;quot;))## [1] &amp;quot;今天是苏轼诞生 358808 天&amp;quot;h&amp;lt;-round(difftime(x,y,units=&amp;quot;days&amp;quot;))print(paste(&amp;quot;苏轼诞生于&amp;quot;,h,&amp;quot;小时之前&amp;quot;))## [1] &amp;quot;苏轼诞生于 358808 小时之前&amp;quot;m&amp;lt;-round(difftime(x,y,units=&amp;quot;mins&amp;quot;))print(paste(&amp;quot;苏轼诞生于&amp;quot;,m,&amp;quot;分钟之前&amp;quot;))## [1] &amp;quot;苏轼诞生于 516683520 分钟之前&amp;quot;s&amp;lt;-round(difftime(x,y,units=&amp;quot;secs&amp;quot;))print(paste(&amp;quot;苏轼诞生于&amp;quot;,s,&amp;quot;秒之前&amp;quot;))## [1] &amp;quot;苏轼诞生于 31001011200 秒之前&amp;quot;print(paste(&amp;quot;公元&amp;quot;,y1,&amp;quot;年，苏东坡出生在四川眉山。传说，就在这一年，眉山一座原本郁郁葱葱的大山，不知为何，突然花草凋零、树木枯萎。民间有言：”眉山出三苏，草木为之枯&amp;quot;))## [1] &amp;quot;公元 1037 年，苏东坡出生在四川眉山。传说，就在这一年，眉山一座原本郁郁葱葱的大山，不知为何，突然花草凋零、树木枯萎。民间有言：”眉山出三苏，草木为之枯&amp;quot;y3&amp;lt;-as.Date(&amp;quot;1056-01-01&amp;quot;)y4&amp;lt;-as.numeric(format(y3,&amp;quot;%Y&amp;quot;))print(paste(&amp;quot;公元&amp;quot;,y4,&amp;quot;年，即北宋嘉祐元年春天，苏轼和弟弟苏辙在父亲苏洵陪伴下，离家出川，前往汴京参加科考.阴差阳错之下成为当年科考第二名&amp;quot;))## [1] &amp;quot;公元 1056 年，即北宋嘉祐元年春天，苏轼和弟弟苏辙在父亲苏洵陪伴下，离家出川，前往汴京参加科考.阴差阳错之下成为当年科考第二名&amp;quot;x&amp;lt;-as.character(&amp;quot;你好啊&amp;quot;)y&amp;lt;-as.character(&amp;quot;啊&amp;quot;)z&amp;lt;-as.character(&amp;quot;好啊&amp;quot;)f&amp;lt;-as.character(&amp;quot;你啊&amp;quot;)g&amp;lt;-as.character(&amp;quot;此处&amp;quot;)h&amp;lt;-as.</description>
     </item>
     
     <item>

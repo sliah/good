@@ -32,6 +32,26 @@ y3<-as.Date("1056-01-01")
 y4<-as.numeric(format(y3,"%Y"))
 print(paste("公元",y4,"年，即北宋嘉祐元年春天，苏轼和弟弟苏辙在父亲苏洵陪伴下，离家出川，前往汴京参加科考.阴差阳错之下成为当年科考第二名"))
 
+
+
+
+x<-as.character("你好啊")
+y<-as.character("啊")
+z<-as.character("好啊")
+f<-as.character("你啊")
+g<-as.character("此处")
+h<-as.character("如何")
+k<-as.character("处理")
+l<-as.character("是好")
+p<-as.character("时间")
+p<-c(10,13,14,16)
+age<-c(1,2,3,4)
+issue<-c(x,y,z,f)
+content<-c(g,h,k,l)
+patientdata<-data.frame(p,age,issue,content)
+patientdata
 ```
 ```
+
+
 

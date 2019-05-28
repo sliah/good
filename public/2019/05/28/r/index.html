@@ -20,7 +20,10 @@
 
 
 
-<link href="/categories/r/index.xml" rel="alternate" type="application/rss+xml" title="A Hugo website" />
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
 
 
 
@@ -57,48 +60,47 @@
 
 <main class="content" role="main">
 
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">R</h1>
+
+    
+    <span class="article-date">2019-05-28</span>
+    
+
+    <div class="article-content">
+      
+
+
+<pre class="r"><code>x&lt;-as.character(&quot;你好啊&quot;)
+y&lt;-as.character(&quot;啊&quot;)
+z&lt;-as.character(&quot;好啊&quot;)
+f&lt;-as.character(&quot;你啊&quot;)
+g&lt;-as.character(&quot;此处&quot;)
+h&lt;-as.character(&quot;如何&quot;)
+k&lt;-as.character(&quot;处理&quot;)
+l&lt;-as.character(&quot;是好&quot;)
+p&lt;-as.character(&quot;年&quot;)
+time&lt;-c(10,13,14,16)
+age&lt;-c(1,2,3,4)
+issue&lt;-c(x,y,z,f)
+content&lt;-c(g,h,k,l)
+patientdata&lt;-data.frame(time,age,issue,content)
+patientdata</code></pre>
+<pre><code>##   time age  issue content
+## 1   10   1 你好啊    此处
+## 2   13   2     啊    如何
+## 3   14   3   好啊    处理
+## 4   16   4   你啊    是好</code></pre>
+
+    </div>
+  </article>
+
   
-  <div class="archive">
-    
-    <h2 class="archive-title">2019</h2>
-    
-    <article class="archive-item">
-      <a href="/2019/05/28/r/" class="archive-item-link">R</a>
-      <span class="archive-item-date">
-        2019-05-28
-      </span>
-    </article>
-    
-    <article class="archive-item">
-      <a href="/2019/05/22/time/" class="archive-item-link">我的时间函数</a>
-      <span class="archive-item-date">
-        2019-05-22
-      </span>
-    </article>
-    
-    <article class="archive-item">
-      <a href="/2019/05/08/2/" class="archive-item-link">花褪残红青杏小</a>
-      <span class="archive-item-date">
-        2019-05-08
-      </span>
-    </article>
-    
-    <article class="archive-item">
-      <a href="/2019/05/03/3/" class="archive-item-link">何妨吟啸且徐行</a>
-      <span class="archive-item-date">
-        2019-05-03
-      </span>
-    </article>
-    
-    <article class="archive-item">
-      <a href="/2019/04/28/1/" class="archive-item-link">山雨欲来风满楼</a>
-      <span class="archive-item-date">
-        2019-04-28
-      </span>
-    </article>
-    
-    
-  </div>
+
 
 </main>
 
@@ -115,6 +117,18 @@
 
     </div>
     
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
     
 
