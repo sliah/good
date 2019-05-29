@@ -28,7 +28,7 @@ y8<-as.numeric(format(y7,"%Y"))
 
 print(paste("今天是苏轼诞生",x1-y1,"周年"))
 ```
-```
+
 
 ```{r,echo=FALSE,eval=TRUE}
 
