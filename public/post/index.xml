@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>我是新一页</title>
+      <title>画图</title>
       <link>/2019/05/28/me/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/05/28/me/</guid>
-      <description>6+6##结果被隐藏啦##结果被隐藏啦Figure 1: Fig.0 这是一张粉嫩嫩的图</description>
+      <description>6+6##结果被隐藏啦##结果被隐藏啦Figure 1: Fig.0 这是一张粉嫩嫩的图h&amp;lt;-160:180h## [1] 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176## [18] 177 178 179 180w&amp;lt;-50:70w## [1] 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70plot(h,w)</description>
     </item>
     
     <item>

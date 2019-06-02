@@ -1,5 +1,5 @@
 ---
-title: 我是新一页
+title: 画图
 author: yaya
 date: '2019-05-28'
 slug: me
@@ -20,11 +20,18 @@ tags: []
 ```
 
 
-
-
 ```{r pressure,echo=FALSE,fig.align='center',fig.height=15,fig.width=8,fig.cap="Fig.0 这是一张粉嫩嫩的图",dev.args=list(bg='pink',pointsize=10)}
 plot(pressure)
 
+
+```
+
+```{r}
+h<-160:180
+h
+w<-50:70
+w
+plot(h,w)
 
 ```
 
