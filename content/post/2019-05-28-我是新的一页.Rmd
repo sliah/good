@@ -23,15 +23,36 @@ tags: []
 ```{r pressure,echo=FALSE,fig.align='center',fig.height=15,fig.width=8,fig.cap="Fig.0 这是一张粉嫩嫩的图",dev.args=list(bg='pink',pointsize=10)}
 plot(pressure)
 
-
 ```
+
 
 ```{r}
 h<-160:180
 h
 w<-50:70
 w
-plot(h,w)
+plot(h,w,col="red")
+library(lattice)
+xyplot(h~w,col="red")
+library(ggplot2)
+df<-data.frame(h,w)
+df
+ggplot(data=df,aes(x=df$h,y=df$w))+geom_point(color="red",size=5)+theme_bw()+geom_line(color="blue")
+hist(h)
 
+
+wdata<-data.frame(sex=factor(rep(c("F","M"),each=200)),weight=c(rnorm(200,55),rnorm(200,58)))
+ a<-ggplot(wdata,aes(x=weight))
+ a+geom_area(stat="bin",fill="336200")
+ a+geom_density(color="red")
+ a+geom_dotplot()
+```
+
+
+```{r}
+set.seed(1410)
+
+dsmall<-diamonds[sample(nrow(diamonds),100),]
+qplot(carat,price,data=diamonds)
 ```
 
