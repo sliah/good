@@ -38,5 +38,6 @@ qplot(carat,price,data=diamonds)
 b<-ggplot(data=df,aes(x=h,y=w))
 b+geom_line(linetype="twodash",size=3)+theme_bw()
 ggsave("image.jpg",scale=2)
+
 ```
 
