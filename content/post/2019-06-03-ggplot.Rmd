@@ -1,0 +1,42 @@
+---
+title: 使用ggplot
+author: yaya
+date: '2019-06-03'
+slug: ggplot
+categories:
+  - R
+tags: []
+---
+```{r}
+h<-160:180
+h
+w<-50:70
+w
+library(ggplot2)
+df<-data.frame(h,w)
+df
+ggplot(data=df,aes(x=df$h,y=df$w))+geom_point(color="red",size=5)+theme_bw()+geom_line(color="blue")
+
+
+wdata<-data.frame(sex=factor(rep(c("F","M"),each=200)),weight=c(rnorm(200,55),rnorm(200,58)))
+ a<-ggplot(wdata,aes(x=weight))
+ a+geom_area(stat="bin",fill="336200")
+ a+geom_density(color="red")
+ a+geom_dotplot(shape=4)
+ a+stat_density()
+ a+geom_area(aes(fill=sex),stat="bin",alpha=0.6)
+ 
+ library(plyr)
+mu<-ddply(wdata,"sex",summarise,grp.mean=mean(weight)) 
+ a+geom_freqpoly()
+ a+geom_freqpoly(aes(color=sex,linetype="dotted"))+theme_minimal()
+ 
+  set.seed(1410)
+dsmall <-diamonds[sample(nrow(diamonds),100),]
+qplot(carat,price,data=diamonds)
+
+b<-ggplot(data=df,aes(x=h,y=w))
+b+geom_line(linetype="twodash",size=3)+theme_bw()
+ggsave("image.jpg",scale=2)
+```
+

@@ -1,5 +1,5 @@
 ---
-title: 画图
+title: 简易画图
 author: yaya
 date: '2019-05-28'
 slug: me
@@ -34,25 +34,9 @@ w
 plot(h,w,col="red")
 library(lattice)
 xyplot(h~w,col="red")
-library(ggplot2)
-df<-data.frame(h,w)
-df
-ggplot(data=df,aes(x=df$h,y=df$w))+geom_point(color="red",size=5)+theme_bw()+geom_line(color="blue")
-hist(h)
+ hist(h)
 
-
-wdata<-data.frame(sex=factor(rep(c("F","M"),each=200)),weight=c(rnorm(200,55),rnorm(200,58)))
- a<-ggplot(wdata,aes(x=weight))
- a+geom_area(stat="bin",fill="336200")
- a+geom_density(color="red")
- a+geom_dotplot()
 ```
 
 
-```{r}
-set.seed(1410)
-
-dsmall<-diamonds[sample(nrow(diamonds),100),]
-qplot(carat,price,data=diamonds)
-```
 
