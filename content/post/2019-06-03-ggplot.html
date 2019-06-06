@@ -68,12 +68,18 @@ mu&lt;-ddply(wdata,&quot;sex&quot;,summarise,grp.mean=mean(weight))
 <pre class="r"><code> a+geom_freqpoly(aes(color=sex,linetype=&quot;dotted&quot;))+theme_minimal()</code></pre>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-8.png" width="672" /></p>
+<pre class="r"><code> a+geom_histogram()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-9.png" width="672" /></p>
+<pre class="r"><code> a+geom_histogram(aes(color=sex),position=&quot;stack&quot;)+theme_classic()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-10.png" width="672" /></p>
 <pre class="r"><code>  set.seed(1410)
 dsmall &lt;-diamonds[sample(nrow(diamonds),100),]
 qplot(carat,price,data=diamonds)</code></pre>
-<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-9.png" width="672" /></p>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-11.png" width="672" /></p>
 <pre class="r"><code>b&lt;-ggplot(data=df,aes(x=h,y=w))
 b+geom_line(linetype=&quot;twodash&quot;,size=3)+theme_bw()</code></pre>
-<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-10.png" width="672" /></p>
-<pre class="r"><code>ggsave(&quot;image.jpg&quot;,scale=2)</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-12.png" width="672" /></p>
+<pre class="r"><code>ggsave(filename=&quot;image.jpg&quot;,scale=2)</code></pre>
 <pre><code>## Saving 14 x 10 in image</code></pre>

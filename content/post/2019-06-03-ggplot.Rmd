@@ -26,10 +26,13 @@ wdata<-data.frame(sex=factor(rep(c("F","M"),each=200)),weight=c(rnorm(200,55),rn
  a+stat_density()
  a+geom_area(aes(fill=sex),stat="bin",alpha=0.6)
  
+ 
  library(plyr)
 mu<-ddply(wdata,"sex",summarise,grp.mean=mean(weight)) 
  a+geom_freqpoly()
  a+geom_freqpoly(aes(color=sex,linetype="dotted"))+theme_minimal()
+ a+geom_histogram()
+ a+geom_histogram(aes(color=sex),position="stack")+theme_classic()
  
   set.seed(1410)
 dsmall <-diamonds[sample(nrow(diamonds),100),]
@@ -37,7 +40,8 @@ qplot(carat,price,data=diamonds)
 
 b<-ggplot(data=df,aes(x=h,y=w))
 b+geom_line(linetype="twodash",size=3)+theme_bw()
-ggsave("image.jpg",scale=2)
+ggsave(filename="image.jpg",scale=2)
+
 
 ```
 
