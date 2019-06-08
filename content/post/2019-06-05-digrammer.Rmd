@@ -14,8 +14,8 @@ library(DiagrammeR)
 grViz(
   "
   digraph fig{
-  scu[label='四川大学',shape=box]
-  A[label='公管',color=red]
+  scu[label='四川大学',shape=star]
+  A[label='公管',color=red,fill=pink]
   scu -> {A,B,C,D,E}
   A->E
   E->B
@@ -30,51 +30,25 @@ grViz(
   bj -> {A,B,C,D,E}
   B->{A,C,D,E}
   C->{A,B,D,E}
-  A->E:sw
+  A->E:sw ##A从西南方向指向E
   }
   "
 )
 
-library(ggplot2)
-a<-ggplot(mtcars,aes(x=mpg,y=cyl))
+grViz("
+graph dot{
+graph[layout=neato]
+node[shape=circle,style=filled,color=grey,label='']
+node[fillcolor=red]
 a
-a+geom_point(color="pink")+theme_bw()
-head(ToothGrowth)
-e<-ggplot(ToothGrowth,aes(x=dose,y=len,group=supp))
-e+geom_boxplot(aes(fill=supp))
-e+geom_point()
-e+geom_boxplot(notch = TRUE,color="red")
-e+geom_violin(trim=FALSE)+
-  stat_summary(fun.data = mean_sdl,
-fun.args = list(mult=1),
-  geom = "pointrange",color="red")
-e+geom_violin(trim=FALSE)+geom_boxplot(width=0.3)
-  e<-ggplot(ToothGrowth,aes(x=dose,y=len,color=dose,fill=dose))
-  #dose剂量，颜色渐变
-e+geom_point() 
-e+geom_point(color="red")  
-#后一种颜色指令会覆盖前一种颜色指令，备注未被覆盖，不用point/line等图的时候
-#加上其他的geom_XX会会恢复本色
-e+geom_jitter(position = position_jitter(0.2))+stat_summary(fun.data = "mean_sdl",
-        fun.args = list(mult=1),geom = "pointrange",color="blue")
-f<-ggplot(ToothGrowth,aes(x=dose,y=len,group=supp))
-f+geom_line(aes(linetype=supp,color=supp))+geom_point(color="#FF0000")
-#supp用因子区分
-#vjust垂直调整位置（-向上，+向下），hjust水平调整位置，左加右减
-f+geom_bar(stat="identity")
-f+geom_bar(stat="identity",fill="steelblue")+geom_text(aes(label=len),
-vjust=-0.3,size=3.5)+theme_minimal()
+b c d
+node[fillcolor=orange]
+edge[color=grey]
+a -> {b c d}
+}      
+")
 
 
-diamonds
-ggplot(diamonds,aes(cut,color))+geom_jitter(aes(color=cut),size=0.5)
- 
-#误差
-df<-ToothGrowth
-df$dose<-as.factor(df$dose)
-head(df)
-#head只展示前六个
-#scale自定义
 ```
 
 

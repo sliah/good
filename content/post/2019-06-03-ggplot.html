@@ -83,3 +83,82 @@ b+geom_line(linetype=&quot;twodash&quot;,size=3)+theme_bw()</code></pre>
 <p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-12.png" width="672" /></p>
 <pre class="r"><code>ggsave(filename=&quot;image.jpg&quot;,scale=2)</code></pre>
 <pre><code>## Saving 14 x 10 in image</code></pre>
+<pre class="r"><code># 2019.06.05
+library(ggplot2)
+a&lt;-ggplot(mtcars,aes(x=mpg,y=cyl))
+a</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-13.png" width="672" /></p>
+<pre class="r"><code>a+geom_point(color=&quot;pink&quot;)+theme_bw()</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-14.png" width="672" /></p>
+<pre class="r"><code>head(ToothGrowth)</code></pre>
+<pre><code>##    len supp dose
+## 1  4.2   VC  0.5
+## 2 11.5   VC  0.5
+## 3  7.3   VC  0.5
+## 4  5.8   VC  0.5
+## 5  6.4   VC  0.5
+## 6 10.0   VC  0.5</code></pre>
+<pre class="r"><code>e&lt;-ggplot(ToothGrowth,aes(x=dose,y=len,group=supp))
+e+geom_boxplot(aes(fill=supp))</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-15.png" width="672" /></p>
+<pre class="r"><code>e+geom_point()</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-16.png" width="672" /></p>
+<pre class="r"><code>e+geom_boxplot(notch = TRUE,color=&quot;red&quot;)</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-17.png" width="672" /></p>
+<pre class="r"><code>e+geom_violin(trim=FALSE)+
+  stat_summary(fun.data = mean_sdl,
+fun.args = list(mult=1),
+  geom = &quot;pointrange&quot;,color=&quot;red&quot;)</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-18.png" width="672" /></p>
+<pre class="r"><code>e+geom_violin(trim=FALSE)+geom_boxplot(width=0.3)</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-19.png" width="672" /></p>
+<pre class="r"><code>  e&lt;-ggplot(ToothGrowth,aes(x=dose,y=len,color=dose,fill=dose))
+  #dose剂量，颜色渐变
+e+geom_point() </code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-20.png" width="672" /></p>
+<pre class="r"><code>e+geom_point(color=&quot;red&quot;)  </code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-21.png" width="672" /></p>
+<pre class="r"><code>#后一种颜色指令会覆盖前一种颜色指令，备注未被覆盖，不用point/line等图的时候加上其他的geom_XX会会恢复本色
+e+geom_jitter(position = position_jitter(0.2))+stat_summary(fun.data = &quot;mean_sdl&quot;,
+        fun.args = list(mult=1),geom = &quot;pointrange&quot;,color=&quot;blue&quot;)</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-22.png" width="672" /></p>
+<pre class="r"><code>f&lt;-ggplot(ToothGrowth,aes(x=dose,y=len,group=supp))
+f+geom_line(aes(linetype=supp,color=supp))+geom_point(color=&quot;#FF0000&quot;)</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-23.png" width="672" /></p>
+<pre class="r"><code>#supp用因子区分
+#vjust垂直调整位置（-向上，+向下），hjust水平调整位置，左加右减
+f+geom_bar(stat=&quot;identity&quot;)</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-24.png" width="672" /></p>
+<pre class="r"><code>f+geom_bar(stat=&quot;identity&quot;,fill=&quot;steelblue&quot;)+geom_text(aes(label=len),
+vjust=-0.3,size=3.5)+theme_minimal()</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-25.png" width="672" /></p>
+<pre class="r"><code>diamonds</code></pre>
+<pre><code>## # A tibble: 53,940 x 10
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+##  3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+## 10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
+## # ... with 53,930 more rows</code></pre>
+<pre class="r"><code>ggplot(diamonds,aes(cut,color))+geom_jitter(aes(color=cut),size=0.5)</code></pre>
+<p><img src="/post/2019-06-03-ggplot_files/figure-html/unnamed-chunk-1-26.png" width="672" /></p>
+<pre class="r"><code>#误差
+df&lt;-ToothGrowth
+df$dose&lt;-as.factor(df$dose)
+head(df)</code></pre>
+<pre><code>##    len supp dose
+## 1  4.2   VC  0.5
+## 2 11.5   VC  0.5
+## 3  7.3   VC  0.5
+## 4  5.8   VC  0.5
+## 5  6.4   VC  0.5
+## 6 10.0   VC  0.5</code></pre>
+<pre class="r"><code>#head只展示前六个
+#scale自定义</code></pre>
