@@ -7,7 +7,7 @@ categories:
   - R
 tags: []
 ---
-```{r}
+```{r,echo=FALSE,eval=TRUE}
 h<-160:180
 h
 w<-50:70
