@@ -14,11 +14,11 @@ library(DiagrammeR)
 grViz(
   "
   digraph fig{
-  scu[label='四川大学',shape=star]
-  A[label='公管',color=red,fill=pink]
-  scu -> {A,B,C,D,E}
-  A->E
-  E->B
+  scu[label='四川大学',shape=striangle]
+  A[label='公管',color=red,fill=pink,shape=striangle]
+  B,C,D,E[shape=striangle]
+  scu ->{A}
+  A->{B,C,D,E}
   }
   "
   )
@@ -55,3 +55,12 @@ a -> {b c d}
 }
 "
 )
+
+
+
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题

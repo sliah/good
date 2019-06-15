@@ -9,15 +9,11 @@ tags: []
 ---
 ```{r,echo=FALSE,eval=TRUE}
 h<-160:180
-h
 w<-50:70
-w
 library(ggplot2)
 df<-data.frame(h,w)
 df
 ggplot(data=df,aes(x=df$h,y=df$w))+geom_point(color="red",size=5)+theme_bw()+geom_line(color="blue")
-
-
 wdata<-data.frame(sex=factor(rep(c("F","M"),each=200)),weight=c(rnorm(200,55),rnorm(200,58)))
  a<-ggplot(wdata,aes(x=weight))
  a+geom_area(stat="bin",fill="336200")
@@ -26,7 +22,6 @@ wdata<-data.frame(sex=factor(rep(c("F","M"),each=200)),weight=c(rnorm(200,55),rn
  a+stat_density()
  a+geom_area(aes(fill=sex),stat="bin",alpha=0.6)
  
- 
  library(plyr)
 mu<-ddply(wdata,"sex",summarise,grp.mean=mean(weight)) 
  a+geom_freqpoly()
@@ -34,7 +29,7 @@ mu<-ddply(wdata,"sex",summarise,grp.mean=mean(weight))
  a+geom_histogram()
  a+geom_histogram(aes(color=sex),position="stack")+theme_classic()
  
-  set.seed(1410)
+set.seed(1410)
 dsmall <-diamonds[sample(nrow(diamonds),100),]
 qplot(carat,price,data=diamonds)
 
@@ -73,6 +68,8 @@ f+geom_bar(stat="identity")
 f+geom_bar(stat="identity",fill="steelblue")+geom_text(aes(label=len),
 vjust=-0.3,size=3.5)+theme_minimal()
 
+df<-data.frame(dose=c("D0.5","D1","D2"),len=c(4.2,10,29.5))
+df2<-data.frame(supp=rep(c("VC","OJ"),each=3),dose=rep(c("D0.5","D1","D2"),2),len=c(6.8,15,33,4.2,10,29.5))
 
 diamonds
 ggplot(diamonds,aes(cut,color))+geom_jitter(aes(color=cut),size=0.5)
