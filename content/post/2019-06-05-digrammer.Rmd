@@ -14,6 +14,7 @@ library(DiagrammeR)
 grViz(
   "
   digraph fig{
+  egde[arrowhead=diamond]
   scu[label='四川大学',shape=striangle]
   A[label='公管',color=red,fill=pink,shape=striangle]
   B,C,D,E[shape=striangle]
@@ -27,10 +28,14 @@ grViz(
   "
   digraph fig{
   bj[label='首都机场',shape=box]
-  bj -> {A,B,C,D,E}
-  B->{A,C,D,E}
-  C->{A,B,D,E}
-  A->E:sw ##A从西南方向指向E
+  edge[arrowhead=point]
+  bj -> {A}
+  A->{B,C}
+  B->{E,F}
+  E->{J}
+  A->J:sw ##A从西南方向指向E
+ 
+ 
   }
   "
 )
@@ -49,16 +54,17 @@ a -> {b c d}
 ")
 
 
-```
-}
-"
+grViz(
+  "
+  digraph fig{
+  bt[shape=box,fontname=Helvetica,penwidth=0.2]
+ A;B;C;D;E;F
+  edge[arrowhead=point]
+ A->B;B->C;C->{E,F}
+ 
+ 
+  }
+  "
 )
+```
 
-
-
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
