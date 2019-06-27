@@ -14,12 +14,16 @@ library(DiagrammeR)
 grViz(
   "
   digraph fig{
-  egde[arrowhead=diamond]
   scu[label='四川大学',shape=striangle]
-  A[label='公管',color=red,fill=pink,shape=striangle]
-  B,C,D,E[shape=striangle]
-  scu ->{A}
+  A[label='公共管理学院',color=red,fill=pink,shape=striangle]
+  B[label='公共管理大类',color=red,fill=pink,shape=striangle]
+  C[label='图书情报与档案管理',color=red,fill=pink,shape=striangle]
+  D[label='哲学',color=red,fill=pink,shape=striangle]
+  E[label='信息管理与信息系统',color=red,fill=pink,shape=striangle]
+  egde[arrowhead=diamond]
+  scu ->A
   A->{B,C,D,E}
+  
   }
   "
   )
@@ -57,14 +61,14 @@ a -> {b c d}
 grViz(
   "
   digraph fig{
-  bt[shape=box,fontname=Helvetica,penwidth=0.2]
+  node[shape=box,fontname=Helvetica,penwidth=0.2]
  A;B;C;D;E;F
   edge[arrowhead=point]
- A->B;B->C;C->{E,F}
+ A->B;B->C;C->D;D->{E,F}
  
  
   }
   "
 )
 ```
-
+![gaga](https://wxt.sinaimg.cn/thumb300/0071XsVUly1g2ihf8qvnhj30ee0eewfb.jpg?tags=%5B%5D.jpg)

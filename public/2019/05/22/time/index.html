@@ -87,20 +87,14 @@
 y&lt;-as.Date(&quot;1037-01-08&quot;)
 x1&lt;-as.numeric(format(x,&quot;%Y&quot;))
 y1&lt;-as.numeric(format(y,&quot;%Y&quot;))
-y3&lt;-as.Date(&quot;1056-01-01&quot;)
-y4&lt;-as.numeric(format(y3,&quot;%Y&quot;))
-y5&lt;-as.Date(&quot;1080-01-01&quot;)
-y6&lt;-as.numeric(format(y5,&quot;%Y&quot;))
-y7&lt;-as.Date(&quot;1101-01-01&quot;)
-y8&lt;-as.numeric(format(y7,&quot;%Y&quot;))
 
 print(paste(&quot;今天是苏轼诞生&quot;,x1-y1,&quot;周年&quot;))</code></pre>
 <pre><code>## [1] &quot;今天是苏轼诞生 982 周年&quot;</code></pre>
-<pre><code>## [1] &quot;今天是苏轼诞生 51261 周&quot;</code></pre>
-<pre><code>## [1] &quot;今天是苏轼诞生 358827 天&quot;</code></pre>
-<pre><code>## [1] &quot;苏轼诞生于 358827 小时之前&quot;</code></pre>
-<pre><code>## [1] &quot;苏轼诞生于 516710880 分钟之前&quot;</code></pre>
-<pre><code>## [1] &quot;苏轼诞生于 31002652800 秒之前&quot;</code></pre>
+<pre><code>## [1] &quot;今天是苏轼诞生 51263 周&quot;</code></pre>
+<pre><code>## [1] &quot;今天是苏轼诞生 358838 天&quot;</code></pre>
+<pre><code>## [1] &quot;苏轼诞生于 358838 小时之前&quot;</code></pre>
+<pre><code>## [1] &quot;苏轼诞生于 516726720 分钟之前&quot;</code></pre>
+<pre><code>## [1] &quot;苏轼诞生于 31003603200 秒之前&quot;</code></pre>
 <pre class="r"><code>print(paste(&quot;公元&quot;,y1,&quot;年，苏东坡出生在四川眉山。传说，就在这一年，眉山一座原本郁郁葱葱的大山，不知为何，突然花草凋零、树木枯萎。民间有言：”眉山出三苏，草木为之枯&quot;))</code></pre>
 <pre><code>## [1] &quot;公元 1037 年，苏东坡出生在四川眉山。传说，就在这一年，眉山一座原本郁郁葱葱的大山，不知为何，突然花草凋零、树木枯萎。民间有言：”眉山出三苏，草木为之枯&quot;</code></pre>
 <pre><code>## [1] &quot;公元 1056 年，即北宋嘉祐元年春天，苏轼和弟弟苏辙在父亲苏洵陪伴下，离家出川，前往汴京参加科考.阴差阳错之下成为次年科考第二名&quot;</code></pre>
@@ -109,15 +103,6 @@ print(paste(&quot;今天是苏轼诞生&quot;,x1-y1,&quot;周年&quot;))</code><
 </div>
 <div id="section-1" class="section level1">
 <h1>一个姑且称之为表的东西（还没学会怎么制表）</h1>
-<pre class="r"><code>x&lt;-as.character(&quot;苏轼诞生眉州&quot;)
-y&lt;-as.character(&quot;苏轼出川赴考&quot;)
-z&lt;-as.character(&quot;苏轼被贬黄州&quot;)
-f&lt;-as.character(&quot;苏轼溘然长逝&quot;)
-time&lt;-c(1037,1056,1080,1101)
-age&lt;-c(1,21,45,66)
-event&lt;-c(x,y,z,f)
-patientdata&lt;-data.frame(time,age,event)
-patientdata</code></pre>
 <pre><code>##   time age        event
 ## 1 1037   1 苏轼诞生眉州
 ## 2 1056  21 苏轼出川赴考
